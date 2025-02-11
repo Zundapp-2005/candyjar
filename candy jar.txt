@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .title {
+            font-size: 2em;
+            color: #333;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .image {
+            width: 200px;
+            height: auto;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            width: 150px;
+            margin: 10px;
+            padding: 15px;
+            font-size: 1em;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+        .happy {
+            background-color: #4caf50;
+        }
+        .sad {
+            background-color: #2196f3;
+        }
+        .bored {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Welcome to My App</h1>
+        <p class="subtitle">Choose your mood</p>
+        <img src="candy_jar.jpeg" alt="App Image" class="image">
+        <a href="happy.html" class="button happy">Happy :)</a>
+        <a href="sad.html" class="button sad">Sad :(</a>
+        <a href="bored.html" class="button bored">Bored :0</a>
+    </div>
+</body>
+</html>

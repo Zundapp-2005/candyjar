@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sad</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #ff4081;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .sad-candy {
+            width: 150px;
+            height: auto;
+        }
+        .question {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #80deea;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #4dd0e1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feeling sad? Don't worry, Sad Candy is here to share some of her cheer-up tips!</h1>
+        <img src="sad candy.jpeg" alt="Sad Candy" class="sad-candy">
+        <p class="question">What's bothering you, O sweet Ayaya?</p>
+        <button class="button">I FEEL ANXIOUS</button>
+        <button class="button">I FEEL LONELY</button>
+        <button class="button">I FEEL ANGRY</button>
+        <button class="button">I FEEL INSECURE</button>
+    </div>
+</body>
+</html>
