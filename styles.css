@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #85f3ec;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: gray;
+    padding: 0;
+}
+
+.button {
+            display: inline-block;
+            width: 150px;
+            margin: 10px;
+            padding: 15px;
+            font-size: 1em;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+      }
+
+    .jar {
+            background-color: #ff3e74;
+    }
+    
+    .jar:hover {
+            background-color: #fd0047;
+            color: white;
+    }
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
