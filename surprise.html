@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Page</title>
+    <style>
+
+        body {
+            background-image: url('heart candy.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #fdf8da;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .quote {
+            font-size: 1.5em;
+            color: #fdf8da;
+            margin: 20px 0;
+            background: #42fdc2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            background-color: #fe4181;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background-color: #53afd4;
+        }
+     
+        .footer {
+            color: #FF3E74;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quote" id="quote"></div>
+        <a href="surprise.html" class="back-button">New Thought</a>
+    </div>
+    <script>
+        const quotes = [
+            "Do you have a map? Because I keep getting lost in your eyes.",
+            "If you were a vegetable, you’d be a cute-cumber.",
+            "Is your dad a boxer? Because you're a knockout.",
+            "Are you a parking ticket? Because you’ve got ‘FINE’ written all over you.",
+            "Do you have a Band-Aid? Because I just scraped my knee falling for you.",
+            "If you were a fruit, you’d be a fine-apple.",
+            "Are you a magician? Because whenever I look at you, everyone else disappears.",
+            "Do you have Wi-Fi? Because I'm feeling a connection.",
+            "Are you a camera? Every time I look at you, I smile.",
+            "Are you a time traveler? Because I see you in my future.",
+            "Is your name Google? Because you have everything I've been searching for.",
+            "Do you have a sunburn, or are you always this hot?",
+            "Are you a snowstorm? Because you've just made my heart melt.",
+            "If beauty were a crime, you'd be serving a life sentence.",
+            "Do you have a pencil? Because I want to erase your past and write our future.",
+            "Is it OK if I follow you home? Cause my parents always told me to follow my dreams.",
+            "Are you a campfire? Because you bring warmth into my life.",
+            "Do you have a name, or can I call you mine?",
+            "Can you lend me a kiss? I promise I'll give it back.",
+            "Are you a star? Because your beauty lights up the night.",
+            "I love how you always know how to make me laugh.",
+            "I love the way your eyes light up when you smile.",
+            "I love your kindness and how you treat everyone with respect.",
+"I love your adventurous spirit and willingness to try new things.",
+"I love the sound of your voice; it’s my favorite melody.",
+"I love how you make me feel safe and protected.",
+"I love your sense of humor; you’re my favorite comedian.",
+"I love your intelligence and how you’re always learning.",
+"I love the little things you do to show you care.",
+"I love how you support me in everything I do.",
+"I love your creativity and how you see the world uniquely.",
+"I love your passion for life and the things you love.",
+"I love your honesty and how you always speak your mind.",
+"I love how you’re always there to listen to me.",
+"I love your confidence and how you’re comfortable in your own skin.",
+"I love your generosity and how you give without expecting anything in return.",
+"I love how you make every moment we spend together special.",
+"I love your positive attitude and how you always see the best in people.",
+"I love your strong work ethic and determination.",
+"I love how you make me feel loved and cherished every day.",
+"You are my sunshine, my only sunshine…",
+"I’m yours, and you are mine…",
+"How sweet it is to be loved by you…",
+"You're my end and my beginning…",
+"Can’t help falling in love with you…",
+"I just wanna be your everything…",
+"You make my heart sing…",
+"Love is all you need…",
+"Just the way you are…",
+"You’ve got a friend in me…",
+"I will always love you…",
+"We found love right where we are…",
+"I’m lucky I’m in love with my best friend…",
+"You’re still the one I run to…",
+"I could make you happy, make your dreams come true…",
+"With you, I’m never alone…",
+"I’d spend ten thousand hours and ten thousand more…",
+"Cause all of me loves all of you…",
+"I have died every day waiting for you…",
+"You make my heart skip a beat…",
+"I want to watch the sunrise with you.",
+"I want to cook something nice with you.",
+"I want to go on a spontaneous road trip with you.",
+"I want to have a picnic in the park with you.",
+"I want to stargaze on a clear night with you.",
+"I want to take dance lessons with you.",
+"I want to visit a museum or art gallery with you.",
+"I want to have a movie marathon with our favorite films with you.",
+"I want to go hiking and explore nature with you.",
+"I want to try a new hobby or sport with you.",
+"I want to exchange love letters with you.",
+"I want to create a scrapbook of our memories with you.",
+"I want to volunteer for a cause we both care about with you.",
+"I want to have a game night with fun board games with you.",
+"I want to travel the world with you.",
+"I want to have a cozy night in with blankets and hot cocoa with you.",
+"I want to go to a concert or live performance with you.",
+"I want to build a fort and have a sleepover with you.",
+"I want to surprise you with a small, thoughtful gift.",
+"I want to take a long walk and talk about our dreams with you.",
+"Every storm runs out of rain.",
+"This too shall pass.",
+"Believe you can and you're halfway there." ,
+"What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+"The only way to do great work is to love what you do.",
+"You are stronger than you think.",
+"Don’t let yesterday take up too much of today.",
+"Every day may not be good, but there’s something good in every day.",
+"You have within you right now, everything you need to deal with whatever the world can throw at you.",
+"Your limitation—it’s only your imagination.",
+"The struggle you’re in today is developing the strength you need for tomorrow.",
+"Keep your face always toward the sunshine—and shadows will fall behind you.",
+"Happiness can be found even in the darkest of times, if one only remembers to turn on the light.", 
+"It’s not whether you get knocked down, it’s whether you get up.",
+"Challenges are what make life interesting and overcoming them is what makes life meaningful.", 
+"You are never too old to set another goal or to dream a new dream.",
+"You are braver than you believe, stronger than you seem, and smarter than you think.",
+"Stars can’t shine without darkness.",
+"When you arise in the morning, think of what a precious privilege it is to be alive—to breathe, to think, to enjoy, to love.", 
+"Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change.",
+
+
+
+
+        ];
+
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+
+        window.onload = displayRandomQuote;
+    </script>
+</body>
+<footer>
+        <div class="footer">Zainab Abbasi, The Candy Jar 2025. All rights reserved.</div>
+</footer>
+</html>
